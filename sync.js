@@ -1,4 +1,4 @@
-const backendURL = "https://github.com/vamseelatha2002/offline-gps-form.git";
+const backendURL = "https://script.google.com/a/macros/datail.in/s/AKfycbw4fymgtBoaXbVJgIdrfww6WBdO1Y3CrkLZT2gZq97mWcLrUo2pCw9d_0uteq9tkLE/exec";
 
 window.addEventListener("online", syncToServer);
 
