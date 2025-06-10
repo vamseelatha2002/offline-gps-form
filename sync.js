@@ -1,4 +1,4 @@
-const backendURL = "https://script.google.com/macros/library/d/10Lr71CC4VA55nMP9M1UVdjVX9uxjJvTGh0WCTUKWq9N4Xgp8fmqmCgzD/4";
+const backendURL = "https://script.google.com/a/macros/datail.in/s/AKfycbw4fymgtBoaXbVJgIdrfww6WBdO1Y3CrkLZT2gZq97mWcLrUo2pCw9d_0uteq9tkLE/exec";
 
 window.addEventListener("online", syncToServer);
 
