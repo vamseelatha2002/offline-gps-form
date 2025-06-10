@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Offline GPS Activity Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <h2>Activity Tracker (Offline Capable)</h2>
+  <form id="activityForm">
+    <input type="date" name="date" required placeholder="Date"><br>
+    <input type="text" name="quantity" required placeholder="Quantity"><br>
+    <input type="text" name="activity" required placeholder="Activity"><br>
+    <input type="text" name="hours" required placeholder="No of Hours"><br>
+    <input type="date" name="startDate" required><br>
+    <input type="date" name="endDate" required><br>
+    <select name="itemType" required>
+      <option value="Brick">Brick</option>
+      <option value="Cement">Cement</option>
+      <option value="Sand">Sand</option>
+    </select><br>
+    <input type="hidden" name="latitude">
+    <input type="hidden" name="longitude">
+    <button type="submit">Save</button>
+  </form>
+  <div id="status"></div>
+
+  <script src="app.js"></script>
+  <script src="sync.js"></script>
+</body>
+</html>
