@@ -1,4 +1,4 @@
-const backendURL = "YOUR_GOOGLE_APPS_SCRIPT_WEBHOOK_URL";
+const backendURL = "https://github.com/vamseelatha2002/offline-gps-form.git";
 
 window.addEventListener("online", syncToServer);
 
