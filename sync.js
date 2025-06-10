@@ -1,6 +1,12 @@
 const backendURL = "https://script.google.com/a/macros/datail.in/s/AKfycbw4fymgtBoaXbVJgIdrfww6WBdO1Y3CrkLZT2gZq97mWcLrUo2pCw9d_0uteq9tkLE/exec";
+console.log("Sync function started.");
 
 window.addEventListener("online", syncToServer);
+fetch(url, requestOptions)
+  .then(response => response.json())
+  .then(data => console.log("Google Forms Response:", data))
+  .catch(error => console.error("Error syncing data:", error));
+console.error("Something went wrong:", error);
 
 function syncToServer() {
   const openReq = indexedDB.open("activityFormDB", 1);
