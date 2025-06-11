@@ -38,3 +38,16 @@ function saveToIndexedDB(data) {
     };
   };
 }
+const request = indexedDB.open("activityFormDB", 1);
+
+request.onsuccess = () => {
+  const db = request.result;
+  const tx = db.transaction("submissions", "readonly");
+  const store = tx.objectStore("submissions");
+  const getAllReq = store.getAll();
+
+  getAllReq.onsuccess = () => {
+    console.log("📦 IndexedDB Records:", getAllReq.result);
+  };
+};
+
