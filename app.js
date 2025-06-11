@@ -38,6 +38,35 @@ function saveToIndexedDB(data) {
     };
   };
 }
+function showIndexedDBData() {
+  const output = document.getElementById("debugOutput");
+  const request = indexedDB.open("activityFormDB", 1);
+
+  request.onsuccess = () => {
+    const db = request.result;
+    const tx = db.transaction("submissions", "readonly");
+    const store = tx.objectStore("submissions");
+    const getAllReq = store.getAll();
+
+    getAllReq.onsuccess = () => {
+      const records = getAllReq.result;
+      if (records.length === 0) {
+        output.innerText = "📭 No records found in IndexedDB.";
+      } else {
+        output.innerText = "📦 IndexedDB Records:\n\n" + JSON.stringify(records, null, 2);
+      }
+    };
+
+    getAllReq.onerror = () => {
+      output.innerText = "❌ Error reading from IndexedDB.";
+    };
+  };
+
+  request.onerror = () => {
+    output.innerText = "❌ Failed to open IndexedDB.";
+  };
+}
+
 const request = indexedDB.open("activityFormDB", 1);
 
 request.onsuccess = () => {
